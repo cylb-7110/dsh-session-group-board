@@ -1,0 +1,58 @@
+{
+    "name":  "dsh-session-group-board",
+    "version":  "1.0.0",
+    "type":  "module",
+    "description":  "Session groups for the DeepSeek Harness sidebar: a paginated group board, per-session group dots, and a session-menu assignment action.",
+    "exports":  {
+                    ".":  "./index.js",
+                    "./client":  "./client.js",
+                    "./locale/*.json":  "./locale/*.json",
+                    "./icon":  "./icon.svg"
+                },
+    "files":  [
+                  "index.js",
+                  "client.js",
+                  "cordis.patch.yml",
+                  "locale/*.json",
+                  "docs",
+                  "icon.svg",
+                  "README.md",
+                  "LICENSE"
+              ],
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web",
+                               "immediately":  true,
+                               "inject":  [
+                                              "@deepseek-ai/dsh-client-ui-sidebar",
+                                              "@deepseek-ai/dsh-client-ui-workspace",
+                                              "@deepseek-ai/dsh-client-ui-session",
+                                              "@deepseek-ai/dsh-client-ui-layout"
+                                          ]
+                           }
+            },
+    "license":  "MIT",
+    "keywords":  [
+                     "dsh-plugin",
+                     "dsh-bundle",
+                     "deepseek-harness",
+                     "session-groups",
+                     "sidebar",
+                     "sessions"
+                 ],
+    "author":  "cylb-7110",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "https://github.com/cylb-7110/dsh-session-group-board"
+                   },
+    "homepage":  "https://github.com/cylb-7110/dsh-session-group-board#readme",
+    "bugs":  {
+                 "url":  "https://github.com/cylb-7110/dsh-session-group-board/issues"
+             },
+    "publishConfig":  {
+                          "access":  "public"
+                      }
+}

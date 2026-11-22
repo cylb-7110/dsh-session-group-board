@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session groups",
+    "description": "Custom groups for workspace sessions: open the group board from the sidebar row and drag a card to regroup it. Each group pages through sessions five cards by two rows, with a pager for the rest. Cards rename, archive/unarchive, and pin/unpin; the pin is the same registry-global pin the sidebar button drives, so the sidebar keeps its own order while each group lists its pinned cards first, most recently pinned first. The board lists every session including archived ones. Session rows show a group dot, the row hover card shows its group, and the session context menu offers Assign group. Membership is stored in this browser (localStorage), so another browser or cleared site data starts ungrouped.",
+    "detail": "docs/DETAIL.md"
+  }
+}
