@@ -50,12 +50,17 @@
 
 ## 安装 / 卸载
 
-- **发布版（npm）**：`dsh plugin --profile <profile> add dsh-session-group-board`，或在插件页「添加插件」里安装。
-- **开发版**：用插件管理器的本地目录安装（会把本目录链接进 profile，改代码后刷新页面即生效）；插件页里能看到「会话分组」条目、图标与详情页（`docs/DETAIL.md`）。
-- **分发包**：`dist/` 下的 `.tgz`（标准 npm 包）与同名 `.zip`，可交给插件管理器或 `pnpm add file:<tgz 路径>` 安装。
+- **GitHub Release（发布方式）**：下载 [Releases](https://github.com/cylb-7110/dsh-session-group-board/releases) 里的 `.tgz`，然后
+
+  ```bash
+  dsh plugin --profile <profile> add https://github.com/cylb-7110/dsh-session-group-board/releases/download/v1.0.0/dsh-session-group-board-1.0.0.tgz
+  ```
+
+  或在插件页「添加插件」里填入该地址 / 选择下载后的 tgz。
+- **本地目录（开发）**：用插件管理器的本地目录安装（会把本目录链接进 profile，改代码后刷新页面即生效）。
 - **卸载**：插件页里移除对应 bundle；或由 DSH 插件管理器操作。
 - 改动 `client.js` 后，页面刷新（Ctrl+R）才会加载新代码；不需要重启 DSH。
-- 注意：发布版与本地开发版是**同一个插件身份之外的两种安装**，不要同时装两个——它们注册相同的界面位置，会互相冲突。
+- 注意：Release 版与本地开发版是**两种安装**，不要同时装两个——它们注册相同的界面位置，会互相冲突。
 
 ## 已知限制
 
